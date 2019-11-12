@@ -1,0 +1,37 @@
+= Snippets for Python Usage in Robot Hackathon
+== Install ODO in Python Codeready Workspace
+----
+curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-linux-amd64 -o /opt/app-root/bin/odo
+chmod +x /opt/app-root/bin/odo
+----
+
+== Deploy to OpenShift using ODO
+
+To deploy to OpenShift, in the terminal follow these steps:
+
+Login to OpenShift
+[subs="attributes"]
+----
+odo login https://master.{url-ocp-basepath} -u <GUID> -p ...Your Password...
+----
+
+TIP: Make sure you are in the project folder
+
+Tell odo that you are using a Python project:
+----
+odo create Python
+----
+
+Expose the url of your application :
+----
+odo url create --port 8080
+----
+Now push your code to the OpenShift
+----
+odo push
+----
+
+*Wait until the odo push is finished
+*Go to the OpenShift web console and open your project. 
+*The route to externally access the application will be visible in the upper right 
+corner. 
