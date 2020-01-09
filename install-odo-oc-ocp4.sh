@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/bin
-case ":$PATH:" in *:$HOME/bin:*) echo "~/bin already in $PATH;; *) PATH=$PATH:~/bin ;; esac
+case ":$PATH:" in *:$HOME/bin:*) echo "~/bin already in \$PATH";; *) PATH=$PATH:~/bin ;; esac
 
 
 curl -L https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz -o /tmp/oc.tar.gz && \
