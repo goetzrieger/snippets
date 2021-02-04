@@ -5,15 +5,10 @@
   - name: latest Apache version installed
     yum:
       name: httpd
-      state: latest 
-
-  - name: Enable and Start Apache
-    service:
-      name: httpd
-      enabled: true
-      state: started
-      
-     
-
-      
+      state: latest
+  - name: Apache enabled and running
+    service:
+      name: httpd
+      enabled: true
+      state: started
       
