@@ -1,13 +1,11 @@
 ---
-- name: Install Apache Webserver
-  hosts: all
-  become: yes
-  tasks:
-
-  - name: Install Apache Latest Version
-    yum:
-      name: httpd
-      state: latest
+- name: Apache server installed
+  hosts: all
+  tasks:
+  - name: latest Apache version installed
+    yum:
+      name: httpd
+      state: latest 
 
   - name: Enable and Start Apache
     service:
@@ -15,7 +13,7 @@
       enabled: true
       state: started
       
-      
+     
 
       
       
