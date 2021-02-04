@@ -1,0 +1,18 @@
+---
+- name: Install Apache Webserver
+  hosts: webserver
+  become: yes
+  tasks:
+
+  - name: Install Apache Latest Version
+    yum:
+      name: httpd
+      state: latest
+
+  - name: Enable and Start Apache
+    service:
+      name: httpd
+      enabled: true
+      state: started
+      
+      
