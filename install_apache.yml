@@ -1,6 +1,6 @@
 ---
 - name: Install Apache Webserver
-  hosts: webserver
+  hosts: all
   become: yes
   tasks:
 
@@ -14,5 +14,8 @@
       name: httpd
       enabled: true
       state: started
+      
+      
+
       
       
