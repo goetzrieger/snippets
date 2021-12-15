@@ -6,7 +6,7 @@
     #selinux_state: enforcing
   tasks:
   - name: set SElinux to enforcing  
-    fedora.linux-system-roles.selinux:
+    linux-system-roles.selinux:
       selinux_policy: targeted
       selinux_state: enforcing
  
