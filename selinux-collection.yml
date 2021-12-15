@@ -5,5 +5,5 @@
     selinux_policy: targeted
     selinux_state: enforcing
   roles:
-  - role: linux-system-roles.selinux
+  - role: fedora.linux-system-roles.selinux
  
