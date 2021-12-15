@@ -6,4 +6,4 @@
     selinux_state: enforcing
   roles:
   - role: linux-system-roles.selinux
-    become: true
+ 
