@@ -1,0 +1,9 @@
+---
+- name: Set selinux boolean
+  hosts: all
+  vars:
+    selinux_policy: targeted
+    selinux_state: enforcing
+  roles:
+  - role: linux-system-roles.selinux
+    become: true
