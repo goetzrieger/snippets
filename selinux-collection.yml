@@ -1,9 +1,12 @@
 ---
 - name: Set selinux boolean
   hosts: all
-  vars:
-    selinux_policy: targeted
-    selinux_state: enforcing
-  roles:
-  - role: fedora.linux-system-roles.selinux
+  #vars:
+   # selinux_policy: targeted
+    #selinux_state: enforcing
+  tasks:
+  - name: set SElinux to enforcing  
+    fedora.linux-system-roles.selinux:
+      selinux_policy: targeted
+      selinux_state: enforcing
  
