@@ -1,11 +1,10 @@
 mail.example.com
 
 [north]
-foo.example.com
-bar.example.com
+north1.example.com
+north2.example.com
 
 [south]
-one.example.com
-two.example.com
-three.example.com
+south1.example.com
+south2.example.com
 
